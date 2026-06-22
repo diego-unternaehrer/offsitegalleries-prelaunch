@@ -55,8 +55,15 @@
         </div>
     </main>
   
-<script>
-  alert("Hello World!");
-</script>
+    <script>
+        var logoAnimation = gsap.timeline({repeat: -1, repeatDelay: 1});
+        window.onload = function (event) {
+            logoAnimation.to("#big-g", {opacity: 0,
+                                       onStart: () => {
+                                           logoAnimation.to("#big-o", {opacity: 0})
+                                       });
+        };
+        
+    </script>
 </body>
 </html>
