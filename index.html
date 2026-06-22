@@ -49,7 +49,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40" height="40" viewBox="0 0 551.034 551.034">
                   <path d="M386.878 0H164.156C73.64 0 0 73.64 0 164.156v222.722c0 90.516 73.64 164.156 164.156 164.156h222.722c90.516 0 164.156-73.64 164.156-164.156V164.156C551.033 73.64 477.393 0 386.878 0M495.6 386.878c0 60.045-48.677 108.722-108.722 108.722H164.156c-60.045 0-108.722-48.677-108.722-108.722V164.156c0-60.046 48.677-108.722 108.722-108.722h222.722c60.045 0 108.722 48.676 108.722 108.722z" style="fill:#00000"></path>
                   <path d="M275.517 133C196.933 133 133 196.933 133 275.516s63.933 142.517 142.517 142.517S418.034 354.1 418.034 275.516 354.101 133 275.517 133m0 229.6c-48.095 0-87.083-38.988-87.083-87.083s38.989-87.083 87.083-87.083c48.095 0 87.083 38.988 87.083 87.083 0 48.094-38.989 87.083-87.083 87.083" style="fill:#00000"></path>
-                  <circle cx="418.306" cy="134.072" r="34.149" style="fill:#00000"></circle>
+                  <circle cx="418.306" cy="134.072" r="34.149" style="fill:#000000"></circle>
                 </svg>
             </a>
         </div>
@@ -59,6 +59,12 @@
         var logoAnimation = gsap.timeline({repeat: -1, repeatDelay: 1});
         window.onload = function (event) {
             logoAnimation.to("#big-g", {opacity: 0});
+            logoAnimation.to("#big-o", {opacity: 0});
+            logoAnimation.to("#small-o", {transform: "scale(2.05) translate(-330 -180)"});
+            logoAnimation.set("#small-o", {opacity: 0, transform: ""});
+            logoAnimation.to("#small-o", {opacity: 1});
+            logoAnimation.to("#big-g", {opacity: 1});
+            logoAnimation.to("#big-o", {opacity: 1});
 
         };
         
